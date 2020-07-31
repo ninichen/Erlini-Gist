@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0ca4c54e-b596-4a17-a144-2cdb053b0239" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1fRYk6jEcQNW5TnKyqgJgsLDzTy" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0ca4c54e-b596-4a17-a144-2cdb053b0239" name="Default Changelist" comment="" />
+      <created>1596182511147</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596182511147</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="426" y="77" key="SettingsEditor" timestamp="1596183520912">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state x="426" y="77" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1596183520912" />
+    <state x="433" y="202" width="673" height="472" key="find.popup" timestamp="1596187958832">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state x="433" y="202" width="673" height="472" key="find.popup/0.23.1440.830@0.23.1440.830" timestamp="1596187958832" />
+  </component>
+</project>

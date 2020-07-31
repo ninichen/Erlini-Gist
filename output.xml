@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.7.5 on darwin)" generated="20200731 16:28:49.119" rpa="false">
+<suite id="s1" name="TC01 create" source="/Users/ninichen/PycharmProjects/Erlini-Gist/Tests/TC01_create.robot">
+<kw name="Open Github login page" library="keyword" type="setup">
+<kw name="open Github" library="commands">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSERS}</arg>
+<arg>remote_url=${seleniumPort.${portSelenium}}</arg>
+</arguments>
+<msg timestamp="20200731 16:28:49.322" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20200731 16:28:49.322" endtime="20200731 16:28:51.261"></status>
+</kw>
+<kw name="Delete All Cookies" library="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" starttime="20200731 16:28:51.261" endtime="20200731 16:28:51.277"></status>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<doc>Sets the timeout that is used by various keywords.</doc>
+<arguments>
+<arg>${setseleniumtimeout}</arg>
+</arguments>
+<status status="PASS" starttime="20200731 16:28:51.277" endtime="20200731 16:28:51.279"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<status status="PASS" starttime="20200731 16:28:51.279" endtime="20200731 16:28:51.280"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<status status="PASS" starttime="20200731 16:28:51.281" endtime="20200731 16:28:51.282"></status>
+</kw>
+<status status="PASS" starttime="20200731 16:28:49.322" endtime="20200731 16:28:51.282"></status>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<arguments>
+<arg>${BrowserWidth.desktop}</arg>
+<arg>${BrowserHeight.desktop}</arg>
+</arguments>
+<status status="PASS" starttime="20200731 16:28:51.283" endtime="20200731 16:28:51.396"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>https://github.com/login</arg>
+</arguments>
+<msg timestamp="20200731 16:28:51.396" level="INFO">Opening url 'https://github.com/login'</msg>
+<status status="PASS" starttime="20200731 16:28:51.396" endtime="20200731 16:28:53.998"></status>
+</kw>
+<status status="PASS" starttime="20200731 16:28:49.321" endtime="20200731 16:28:53.998"></status>
+</kw>
+<test id="s1-t1" name="As a user, before I create a gist, i want to login">
+<kw name="verify login page" library="K01_create">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${titleSignIn}</arg>
+</arguments>
+<status status="PASS" starttime="20200731 16:28:54.000" endtime="20200731 16:28:54.036"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>${titleSignIn}</arg>
+</arguments>
+<assign>
+<var>${text}</var>
+</assign>
+<msg timestamp="20200731 16:28:54.053" level="INFO">${text} = Sign in to GitHub</msg>
+<status status="PASS" starttime="20200731 16:28:54.036" endtime="20200731 16:28:54.053"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${text}</arg>
+<arg>${textTitleSignIn}</arg>
+</arguments>
+<status status="PASS" starttime="20200731 16:28:54.053" endtime="20200731 16:28:54.053"></status>
+</kw>
+<status status="PASS" starttime="20200731 16:28:53.999" endtime="20200731 16:28:54.054"></status>
+</kw>
+<kw name="input github username XXX" library="K01_create">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${inputUsername}</arg>
+</arguments>
+<status status="PASS" starttime="20200731 16:28:54.054" endtime="20200731 16:28:54.071"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${inputUsername}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20200731 16:28:54.072" level="INFO">Typing text 'XXX' into text field 'css=input#login_field'.</msg>
+<status status="PASS" starttime="20200731 16:28:54.071" endtime="20200731 16:28:54.150"></status>
+</kw>
+<status status="PASS" starttime="20200731 16:28:54.054" endtime="20200731 16:28:54.150"></status>
+</kw>
+<kw name="input github password YYY" library="K01_create">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${inputPassword}</arg>
+</arguments>
+<status status="PASS" starttime="20200731 16:28:54.151" endtime="20200731 16:28:54.170"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${inputPassword}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200731 16:28:54.171" level="INFO">Typing text 'YYY' into text field 'css=input#password'.</msg>
+<status status="PASS" starttime="20200731 16:28:54.170" endtime="20200731 16:28:54.234"></status>
+</kw>
+<status status="PASS" starttime="20200731 16:28:54.151" endtime="20200731 16:28:54.234"></status>
+</kw>
+<kw name="click sign in button" library="K01_create">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${buttonSignIn}</arg>
+</arguments>
+<status status="PASS" starttime="20200731 16:28:54.235" endtime="20200731 16:28:54.248"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${buttonSignIn}</arg>
+</arguments>
+<msg timestamp="20200731 16:28:54.249" level="INFO">Clicking element 'css=input[name='commit']'.</msg>
+<status status="PASS" starttime="20200731 16:28:54.249" endtime="20200731 16:28:55.694"></status>
+</kw>
+<status status="PASS" starttime="20200731 16:28:54.234" endtime="20200731 16:28:55.695"></status>
+</kw>
+<kw name="verify user logged in" library="K01_create">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${titleMyUsername}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20200731 16:29:26.827" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200731 16:29:26.297" endtime="20200731 16:29:26.827"></status>
+</kw>
+<msg timestamp="20200731 16:29:26.832" level="FAIL">Element 'css=.dashboard-sidebar.js-sticky.px-3.px-lg-4.px-md-4.top-0 .d-inline-block.details-reset.position-relative &gt; summary[role='button'] &gt; .css-truncate.css-truncate-target.ml-1' not visible after 30 seconds.</msg>
+<status status="FAIL" starttime="20200731 16:28:55.696" endtime="20200731 16:29:26.832"></status>
+</kw>
+<status status="FAIL" starttime="20200731 16:28:55.695" endtime="20200731 16:29:26.832"></status>
+</kw>
+<tags>
+<tag>ready</tag>
+</tags>
+<status status="FAIL" starttime="20200731 16:28:53.998" endtime="20200731 16:29:26.832" critical="yes">Element 'css=.dashboard-sidebar.js-sticky.px-3.px-lg-4.px-md-4.top-0 .d-inline-block.details-reset.position-relative &gt; summary[role='button'] &gt; .css-truncate.css-truncate-target.ml-1' not visible after 30 seconds.</status>
+</test>
+<test id="s1-t2" name="As a user, I can't create gist when desc, filename, and notes is empty">
+<kw name="do login and go to gist page" library="K01_create">
+<kw name="click button sign in home" library="K01_create">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${buttonSignInHome}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20200731 16:29:58.026" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200731 16:29:57.526" endtime="20200731 16:29:58.026"></status>
+</kw>
+<msg timestamp="20200731 16:29:58.026" level="FAIL">Element 'css=.HeaderMenu-link.mr-3.no-underline' not visible after 30 seconds.</msg>
+<status status="FAIL" starttime="20200731 16:29:26.835" endtime="20200731 16:29:58.026"></status>
+</kw>
+<status status="FAIL" starttime="20200731 16:29:26.834" endtime="20200731 16:29:58.026"></status>
+</kw>
+<status status="FAIL" starttime="20200731 16:29:26.834" endtime="20200731 16:29:58.026"></status>
+</kw>
+<tags>
+<tag>ready</tag>
+</tags>
+<status status="FAIL" starttime="20200731 16:29:26.833" endtime="20200731 16:29:58.027" critical="yes">Element 'css=.HeaderMenu-link.mr-3.no-underline' not visible after 30 seconds.</status>
+</test>
+<test id="s1-t3" name="As a user, I want to create a public gist">
+<kw name="do login and go to gist page" library="K01_create">
+<kw name="click button sign in home" library="K01_create">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${buttonSignInHome}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20200731 16:30:29.151" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200731 16:30:28.662" endtime="20200731 16:30:29.152"></status>
+</kw>
+<msg timestamp="20200731 16:30:29.152" level="FAIL">Element 'css=.HeaderMenu-link.mr-3.no-underline' not visible after 30 seconds.</msg>
+<status status="FAIL" starttime="20200731 16:29:58.028" endtime="20200731 16:30:29.152"></status>
+</kw>
+<status status="FAIL" starttime="20200731 16:29:58.028" endtime="20200731 16:30:29.152"></status>
+</kw>
+<status status="FAIL" starttime="20200731 16:29:58.028" endtime="20200731 16:30:29.152"></status>
+</kw>
+<tags>
+<tag>ready</tag>
+</tags>
+<status status="FAIL" starttime="20200731 16:29:58.027" endtime="20200731 16:30:29.152" critical="yes">Element 'css=.HeaderMenu-link.mr-3.no-underline' not visible after 30 seconds.</status>
+</test>
+<kw name="close github page" library="keyword" type="teardown">
+<kw name="Delete All Cookies" library="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" starttime="20200731 16:30:29.154" endtime="20200731 16:30:29.185"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200731 16:30:29.185" endtime="20200731 16:30:29.266"></status>
+</kw>
+<status status="PASS" starttime="20200731 16:30:29.153" endtime="20200731 16:30:29.266"></status>
+</kw>
+<doc>Test cases for Create Gist</doc>
+<status status="FAIL" starttime="20200731 16:28:49.121" endtime="20200731 16:30:29.266"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="3">Critical Tests</stat>
+<stat pass="0" fail="3">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="3">ready</stat>
+</tag>
+<suite>
+<stat pass="0" fail="3" id="s1" name="TC01 create">TC01 create</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
